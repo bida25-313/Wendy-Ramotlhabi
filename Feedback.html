@@ -2,6 +2,89 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>FEEDBACK</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding:0;
+        display:flex;
+        justify-content:  center;
+        align-items: center;
+        height: 100vh;
+        background-color: white;
+    }
+
+    .feedback {
+        background-color: mediumaquamarine;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rbga(0,0,0,0.2);
+        width:100%;
+        max-width: 400px;
+    }
     
+    .feedback-form h2  {
+        margin-bottom: 15px;
+    }
+
+    .feedback-form label {
+        display:block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea,
+    .feedback-form button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-bottom-left-radius: 4px;
+        border:1px solid black;
+    }
+
+.feedback-form button {
+    background-color: azure;
+    color:cadetblue;
+    border:none;
+    cursor: pointer;
+}
+    .feedback-form button {
+        background-color: azure;
+    
+    }
+
+</head>
+<body>
+
+    <header>
+    <h1>Feedback form</h1>
+    
+    <form>
+        <p>Name:</p>
+        <input type="text" required>
+
+        <p>Email:</p>
+        <input type="email":required>
+
+        <p>Rate our products:</p>
+        <select :required>
+            <option>⭐⭐⭐⭐Excellent</option>
+            <option>⭐⭐⭐Good</option>
+            <option>⭐⭐Average</option>
+            <option>⭐Poor</option>
+        </select>
+
+        <p>Your feedback:</p>
+        <textarea rows="4" cols="30" :required</textarea>
+
+        <br><br>
+        <button type="submit">Submit</button>
+        </form>
+        <p>Thank you for helping us improve our service</p>
+
+        </body>
+        </html>
+
