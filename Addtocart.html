@@ -2,26 +2,143 @@
 <html lang="en">
  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widtth=device-width,initial=scale1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Add to cart</title>
+    
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+/* HEADER + NAVBAR */
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1{
+            margin:0;
+        }
+
+        nav  {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover{
+            color:aquamarine;
+        }
+
+/*MAIN LAYOUT */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 220px;
+            background: #f2f2f2;
+            padding: 20px;
+}
+
+        .sidebar a {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .sidebar a :hover{
+             color:aquamarine;
+        }
+
+/* MAIN CONTENT */
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content h1 {
+             margin-top: 0;
+        }
+        
+/*NEW FLEX SECTION */
+        .main-section {
+            display: flexbox;
+            gap: 40px;
+        }
+
+        /*PRODUCTS*/
+        .products-selection{
+            flex:2;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .price {
+            font-weight: bold;
+        }
+/* CART SUMMARY */
+        .cart-summary {
+            margin-top: 30px;
+            padding: 15px;
+            background: #eee;
+            width: 250px;
+            border-radius: 8px;
+        }
+/*BUTTON */
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #04855c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #555;
+        }
+    </style>
+  
 </head>
 
 <body> 
 
-    <header>
+<header>
+    <h1>Add to cart</h1>
+
       <nav>
         <a href="index.html">Home</a>
-        <a href="AboutUs .html">About Us</a>
-        <a href="Products .html">Products</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="Products.html">Products</a>
         <a href="Addtocart.html">Add to cart</a>
         <a href="Feedback.html">Feedback</a>
-        <a href="Contact .html">Contact</a>
+        <a href="Contact.html">Contact</a>
       </nav>
     </header>
 
 <div class="container">
 
-  <!--LEFT NAVIGATION-->
+  <!--SIDEBAR-->
 <div class="sidebar">
     <h3>Categories</h3>
     <a href="Men.html">Men</a>
@@ -29,13 +146,18 @@
     <a href="Teens.html">Teens</a>
 </div>
 
-<!--RIGHT SIDE PRODUCTS-->
+<!--CONTENT-->
 <div class="content">
     <h1>Select Products</h1>
 
+    <!--NEW FLEX WRAPPER-->
+    <div class="main-section">
+
+        <!--LEFT:PRODUCTS-->
+  <div class="produts-section">
     <form>  
          
-        <div class="products">
+        <div class="product">
             <div class="product-info">
                 <h3>Ripped denim dress</h3>
                 <p class="price">P300</p>
@@ -43,7 +165,7 @@
                 <input type="checkbox">
         </div>
 
-         <div class="products">
+         <div class="product">
             <div class="product-info">
                 <h3>Black denim leggings</h3>
                 <p class="price">P250</p>
@@ -51,8 +173,9 @@
                 <input type="checkbox">
          </div>
 
-         <div class="produts">
-            <div class="products-info">
+<!--FIXED TYPO HERE-->
+         <div class="product">
+            <div class="product-info">
                 <h3>Denim skirt</h3>
                 <p class="price">P350</p>
                 </div>
@@ -62,15 +185,19 @@
             <button type="submit"> Add Selected to Cart</button>
 
         </form>
+        </div>
+
+<!--RIGHT: CART SUMMARY -->
+        <div class="cart-summary">
+            <h3> Cart Summary</h3>
+            <p>Item selected:0</p>
+            <p>Total:P0</p>
+        </div>
 
     </div>
+  </div> 
 
 </div>
-
-
-<header>
-    <h1>Add to cart</h1>
-</header>
 
 </body>
 </html>
