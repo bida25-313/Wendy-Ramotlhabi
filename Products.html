@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Georgia', serif;
+        background-color: #f9f9f9;
+      }
+
+      /* ── TOP HEADER ── */
+      header {
+        background: lightblue;
+        color: navy;
+        padding: 15px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+      }
+
+      /* ── NAV ── */
+      nav {
+        background: rgb(0, 0, 79);
+        padding: 10px 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .nav-item .nav-link {
+        display: block;
+        padding: 8px 14px;
+        text-decoration: none;
+        color: rgb(184, 133, 4);
+        border-radius: 4px;
+        transition: background 0.2s;
+        font-size: 14px;
+      }
+
+      .nav-item .nav-link:hover {
+        background: lightblue;
+        color: #fff;
+      }
+
+      /* ── MAIN LAYOUT ── */
+      .container {
+        display: flex;
+        min-height: calc(100vh - 110px);
+      }
+
+      /* ── LEFT SIDEBAR ── */
+      .sidebar {
+        width: 220px;
+        min-width: 220px;
+        background: lightblue;
+        padding: 20px;
+      }
+
+      .sidebar h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        text-decoration: none;
+        color: black;
+        background: rgba(255, 255, 255, 0.35);
+        border-radius: 6px;
+        transition: background 0.2s;
+      }
+
+      .sidebar a:hover {
+        background: rgba(255, 255, 255, 0.65);
+      }
+
+      /* ── MAIN CONTENT ── */
+      .main {
+        flex: 1;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .main h1 {
+        margin-bottom: 30px;
+        font-size: 26px;
+        color: #333;
+      }
+
+      /* ── PRODUCT GRID ── */
+      .products {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      /* ── CARD ── */
+      .card {
+        width: 180px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .info {
+        padding: 10px;
+      }
+
+      .product-name {
+        font-weight: bold;
+        font-size: 14px;
+        color: #222;
+      }
+
+      .price {
+        color: black;
+        font-weight: bold;
+        margin-top: 6px;
+        font-size: 15px;
+      }
+
+      .description {
+        font-size: 13px;
+        color: #666;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- TOP HEADER -->
+    <header>
+      <h1>Products</h1>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="Products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="Addtocart.html">Add to Cart</a></li>
+        <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <h3>Categories</h3>
+        <a href="Products.html">Men</a>
+        <a href="Products.html">Women</a>
+        <a href="Products.html">Teens</a>
+      </div>
+    
+      <!-- MAIN CONTENT -->
+      <div class="main">
+        <h1>Our Products</h1>
+
+        <div class="products">
+
+          <div class="card">
+            <img src="images/SHEIN ICON Women's Summer Washed Pleated Slim Fit….jpg" alt="Product 1" />
+            <div class="info">
+              <div class="product-name">Sleeveles pleated Denim Dress</div>
+              <div class="price">P300</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/Women's Summer Fashionable Hollow Out Halterneck….jpg" alt="Product 2" />
+            <div class="info">
+              <div class="product-name">Hollow Halkneck Denim dress</div>
+              <div class="price">P250</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/Women's Retro Sweetheart Neckline Corset Denim….jpg" alt="Product 3" />
+            <div class="info">
+              <div class="product-name">Denim Corset dress</div>
+              <div class="price">P350</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/SHEIN MOD MOD Plus Size Denim Midi Dress With….jpg" alt="Product 4"/>
+            <div class="info">
+              <div class="product-name">Denim mini dress</div>
+              <div class="price">P150</div>
+            </div>
+          </div>
+
+         
+           <div class="card">
+            <img src="images/Women & Teen Girls Fashion Street Style Elastic….jpg" alt="Product 5"/>
+            <div class="info">
+              <div class="product-name">Decorated Denim jeans</div>
+              <div class="price">P250</div>
+            </div>
+          </div>
+
+           <div class="card">
+            <img src="images/SHEIN MOD Plus Size Women Loose Fit Straight Leg….jpg" alt="Product 6"/>
+            <div class="info">
+              <div class="product-name">Straight leg Denim jeans</div>
+              <div class="price">P200</div>
+            </div>
+          </div>
+
+           <div class="card">
+            <img src="images/Teen Girl Casual Fashion Washed Blue Denim 2pcs….jpg" alt="Product 7"/>
+            <div class="info">
+              <div class="product-name">Blue 2 piece Denim jeans</div>
+              <div class="price">P500</div>
+            </div>
+          </div>
+        
+          <div class="card">
+            <img src="images/Selenza Stylish Sleeveless Plain Denim Mini Dress….jpg" alt="Product 9"/>
+            <div class="info">
+              <div class="product-name">Sleevless Plain Denim mini dress</div>
+              <div class="price">P200</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/Elegant White Pleated Maxi Skirt Featuring A Denim….jpg" alt="Product 10"/>
+            <div class="info">
+              <div class="product-name">White pleated maxi skirt</div>
+              <div class="price">P250</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/details_ backless, chain, criss cross, raw hem….jpg" alt="Product 11"/>
+            <div class="info">
+              <div class="product-name">Backless,chain,criss cross Denim jacket</div>
+              <div class="price">P350</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/Amazon_com_ Fulihug Girls Jeans Size 10-12 Elastic….jpg" alt="Product 12"/>
+            <div class="info">
+              <div class="product-name">Girls jeans</div>
+              <div class="price">P150</div>
+            </div>
+          </div>
+  
+            <div class="card">
+            <img src="images/🔥Snag these must-haves on SHEIN before they're….jpg" alt="Product 13"/>
+            <div class="info">
+              <div class="product-name">Denim Dress</div>
+              <div class="price">P200</div>
+            </div>
+          </div>
+        
+          <div class="card">
+            <img src="images/Men's Vintage Metal Zipper Washed Denim Baggy Shorts, Summer.jpg" alt="Product 14"/>
+            <div class="info">
+              <div class="product-name">Denim Baggy shorts</div>
+              <div class="price">P350</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/Men's Gothic Print Frayed Hem Fashionable Versatile Washed Denim Shorts.jpg" alt="Product 15"/>
+            <div class="info">
+             <div class="product-name">Men's Gothic Print Frayed Hem Versatile Denim Shorts</div>
+             <div class="price">P350</div>
+            </div>
+          </div>
+      
+          <div class="card">
+            <img src="images/Men Ripped Flap Pocket Denim Jacket Without Hoodie.jpg" alt="Product16"/>
+            <div class="info">
+             <div class="product-name">Mens ripped flap pocket denim with hoodie</div>
+             <div class="price">P550</div>
+            </div>
+          </div>
+      
+          <div class="card">
+            <img src="images/Men Cotton Ripped Flap Pocket Denim Jacket Without Tee.jpg" alt="Product17"/>
+            <div class="info">
+             <div class="product-name">Mens Cotton Ripped Pockect Denim Jacket</div>
+             <div class="price">P250</div>
+            </div>
+          </div>
+      
+           <div class="card">
+            <img src="images/male model wearing an oversized denim bomber jacket with dark blue leather patch pockets.jpg" alt="Product18"/>
+            <div class="info">
+             <div class="product-name">Mens oversized denim bomber jacket with blue leather patch pockets</div>
+             <div class="price">P350</div>
+            </div>
+          </div>
+
+           <div class="card">
+            <img src="images/Levi's Men's 565 Loose Fit Mid Rise Jeans.jpg" alt="Product19"/>
+            <div class="info">
+             <div class="product-name"> Mens Levi jean</div>
+             <div class="price">P350</div>
+            </div>
+          </div>
+
+           
+          <div class="card">
+            <img src="images/How To Style Baggy Pants For Men_ Master The Trend In 2024.jpg" alt="Product20"/>
+            <div class="info">
+             <div class="product-name">Baggy Denim pants</div>
+             <div class="price">P400</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/Elegant White Pleated Maxi Skirt Featuring A Denim….jpg" alt="Product21"/>
+            <div class="info">
+             <div class="product-name">White Pleated maxi skirt and a top </div>
+             <div class="price">P450</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/Aesthetic Wide Leg Vintage Denim Jeans.jpg" alt="Product22"/>
+            <div class="info">
+             <div class="product-name">Wide Leg vintage denim jeans</div>
+             <div class="price">P250</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/224757837647153033.jpg" alt="Product23"/>
+            <div class="info">
+             <div class="product-name">Ripped mens short</div>
+             <div class="price">P250</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="images/332562753751568070.jpg" alt="Product24"/>
+            <div class="info">
+             <div class="product-name">Modern tinted Denim jacket</div>
+             <div class="price">P450</div>
+            </div>
+          </div>
+
+          
+        </div><!-- /.products -->
+      </div><!-- /.main -->
+    </div><!-- /.container -->
+
+    <footer>
+      <p>&copy; 2026 Wens lux denim store.All rights are reserved.</p>
+    </footer>
+
+  </body>
+</html>

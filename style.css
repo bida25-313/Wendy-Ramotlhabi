@@ -1,0 +1,88 @@
+/*RESET*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+
+/*==================== HEADER / NAVBAR ===================*/
+header {
+    background: white;
+    color:black;
+    display: flex;
+    padding: 15px 30px;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/*NAV LINKS*/
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: line;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+}
+
+/*=================== SIDEBAR ===============*/
+.sidebar{
+    width:220px;
+    background: white;
+    padding: 20px;
+    border-right: 1px solid;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color:black;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background: white;
+}
+
+/*============MAIN CONTENT==============*/
+.container {
+    display: flex;
+}
+
+/*============= FOOTER ================*/
+footer {
+    background: rgb(0, 0, 80);
+    color: goldenrod;
+    text-align: bottom;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: rgb(0, 0, 79);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Add to cart</title>
+    <link rel="stylesheet" href="style.css"/>
     
 <style>
+    /*body*/
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-/* HEADER + NAVBAR */
+
+/* HEADER */
         header {
-            background: #333;
-            color: white;
+            background: lightblue;
+            color: navy;
             padding: 15px;
             display: flex;
             justify-content: space-between;
@@ -24,44 +30,59 @@
             margin:0;
         }
 
-        nav  {
-            display: flex;
-            gap: 20px;
-        }
+/*--NAVIGATION*--*/
+       nav {
+        background: rgb(0, 0, 79);
+        padding: 10px 20px;
+      }
 
-        nav a {
-            color: white;
-            margin-right: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
 
-        nav a:hover{
-            color:aquamarine;
-        }
+      .nav-item .nav-link {
+        display: block;
+        padding: 8px 14px;
+        text-decoration: none;
+        color: rgb(184, 133, 4);
+        border-radius: 4px;
+        transition: background 0.2s;
+        font-size: 14px;
+      }
+
+      .nav-item .nav-link:hover {
+        background: lightblue;
+        color: #fff;
+      }
+
 
 /*MAIN LAYOUT */
         .container {
-            display: flex;
-            min-height: 100vh;
+            flex: 1;
         }
 
-        /* SIDEBAR */
+        /* SIDEBAR */   
         .sidebar {
             width: 220px;
-            background: #f2f2f2;
+            background: rgb(193, 217, 225);
+            color: black;
             padding: 20px;
 }
 
         .sidebar a {
             display: block;
             margin-bottom: 10px;
-            color: #333;
+            background: lightblue;
+             color:black;
             text-decoration: none;
+            border-left: 2px solid #333;
         }
 
         .sidebar a :hover{
-             color:aquamarine;
+             color:black;
         }
 
 /* MAIN CONTENT */
@@ -76,12 +97,13 @@
         
 /*NEW FLEX SECTION */
         .main-section {
-            display: flexbox;
+            display: flex;
             gap: 40px;
+            align-items: flex-start;
         }
 
         /*PRODUCTS*/
-        .products-selection{
+        .products-section{
             flex:2;
         }
 
@@ -92,10 +114,30 @@
             border-bottom: 1px solid #ccc;
             padding: 10px 0;
         }
+        .product-info{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+        }
 
+        .product-info img{
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .info{
+            flex: 1;
+        }
         .price {
             font-weight: bold;
+            color: rgb(131, 131, 3);
         }
+
 /* CART SUMMARY */
         .cart-summary {
             margin-top: 30px;
@@ -103,13 +145,17 @@
             background: #eee;
             width: 250px;
             border-radius: 8px;
+            position:sticky;
+            top: 20px;
+            align-self: flex-start;
         }
+
 /*BUTTON */
         button {
             margin-top: 20px;
             padding: 10px 15px;
-            background: #04855c;
-            color: white;
+            background: goldenrod;
+            color: black;
             border: none;
             cursor: pointer;
         }
@@ -117,33 +163,116 @@
         button:hover {
             background: #555;
         }
+/*payment-selection*/
+        .payment-selection {
+            margin-top: 30px;
+            padding: 20px;
+            background: goldenrod;
+            border-radius: 10px;
+            width: 300px;
+    
+        }
+
+        .payment-selection h3 {
+            margin-top: 0;
+            font-size: 15px;
+        }
+
+        .payment-selection label{
+            display: block;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .payment-selection input[type="text"],
+        .payment-selection input[type="password"]{
+            display: block;
+            margin: 8px 0;
+            padding: 8px;
+            width: 280px;
+            border: 1px black;
+            border-radius: 04px;
+            box-sizing: border-box;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+
+        .payment-selection button{
+                width: 100%;
+                margin-top: 10px;
+            }
+
+        .summary-area{
+            width: 250px;
+        }
+
+        .cart-btn{
+            float: right;
+            margin-bottom: 10px;
+            margin-left: auto;
+        }
+
+        .right-panel{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            gap: 150px;
+            justify-content: flex-end;/*pushes payment downwards*/
+        }
+
+        /*============= FOOTER ================*/
+footer {
+    background: rgb(0, 0, 80);
+    color: goldenrod;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer a {
+    color: rgb(0, 0, 79);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+    
+        
     </style>
   
 </head>
 
 <body> 
 
+<!--TOP HEADER-->
 <header>
-    <h1>Add to cart</h1>
+    <h1><strong>Checkout</strong></h1>
+</header>
 
+<!--NAVIGATION-->
       <nav>
-        <a href="index.html">Home</a>
-        <a href="AboutUs.html">About Us</a>
-        <a href="Products.html">Products</a>
-        <a href="Addtocart.html">Add to cart</a>
-        <a href="Feedback.html">Feedback</a>
-        <a href="Contact.html">Contact</a>
+        <ul>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="Products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="Addtocart.html">Add to cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
       </nav>
-    </header>
 
+<!-- MAIN CONTAINER -->
 <div class="container">
 
   <!--SIDEBAR-->
 <div class="sidebar">
     <h3>Categories</h3>
-    <a href="Men.html">Men</a>
-    <a href="Women.html">Women</a>
-    <a href="Teens.html">Teens</a>
+    <a href="Products.html">Men</a>
+    <a href="Products.html">Women</a>
+    <a href="Products.html">Teens</a>
 </div>
 
 <!--CONTENT-->
@@ -154,44 +283,228 @@
     <div class="main-section">
 
         <!--LEFT:PRODUCTS-->
-  <div class="produts-section">
+  <div class="products-section">
     <form>  
          
         <div class="product">
             <div class="product-info">
-                <h3>Ripped denim dress</h3>
+                <img src="images/SHEIN ICON Women's Summer Washed Pleated Slim Fit….jpg" alt="Product 1" />
+                <h3>Sleeveles pleated Denim Dress</h3>
                 <p class="price">P300</p>
                 </div>
-                <input type="checkbox">
+                <input type="checkbox" value="300">
         </div>
 
          <div class="product">
             <div class="product-info">
-                <h3>Black denim leggings</h3>
+                <img src="images/Women's Summer Fashionable Hollow Out Halterneck….jpg" alt="Product 2" />
+                <h3>Hollow Halkneck Denim dress</h3>
                 <p class="price">P250</p>
                 </div>
-                <input type="checkbox">
+                <input type="checkbox" value="250">
          </div>
 
 <!--FIXED TYPO HERE-->
          <div class="product">
             <div class="product-info">
-                <h3>Denim skirt</h3>
+            <img src="images/Women's Retro Sweetheart Neckline Corset Denim….jpg" alt="Product 3" />
+                <h3>Denim Corset dress</h3>
                 <p class="price">P350</p>
                 </div>
-                <input type="checkbox">
+                <input type="checkbox" value="350">
             </div>
 
-            <button type="submit"> Add Selected to Cart</button>
+         <div class="product">
+            <div class="product-info">
+            <img src="images/SHEIN MOD MOD Plus Size Denim Midi Dress With….jpg" alt="Product 4"/>
+              <h3>Denim mini dress</h3>
+              <p class="price">P150</p>
+              </div>
+              <input type="checkbox" value="150">
+         </div>
 
+         <div class="product">
+            <div class="product-info">
+                <img src="images/Women & Teen Girls Fashion Street Style Elastic….jpg" alt="Product 5"/>
+                <h3>Decorated Denim jeans</h3>
+                <p class="price">P250</p>
+                </div>
+                <input type="checkbox" value="250">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/SHEIN MOD Plus Size Women Loose Fit Straight Leg….jpg" alt="Product 6"/>
+                <h3>Straight leg Denim jeans</h3>
+                <p class="price">P200</p>
+                </div>
+                <input type="checkbox" value="200">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/Teen Girl Casual Fashion Washed Blue Denim 2pcs….jpg" alt="Product 7"/>
+                <h3>Blue 2 piece Denim jeans</h3>
+                <p class="price">P500</p>
+                </div>
+                <input type="checkbox" value="500">
+            </div>
+
+         <div class="product">
+            <div class="product-info">
+                 <img src="images/Selenza Stylish Sleeveless Plain Denim Mini Dress….jpg" alt="Product 9"/>
+                <h3>Sleevless Plain Denim mini dress</h3>
+                <p class="price">P200</p>
+                </div>
+                <input type="checkbox" value="200">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/Elegant White Pleated Maxi Skirt Featuring A Denim….jpg" alt="Product 10"/>
+                <h3>White pleated maxi skirt</h3>
+                <p class="price">P250</p>
+                </div>
+                <input type="checkbox" value="250">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/details_ backless, chain, criss cross, raw hem….jpg" alt="Product 11"/>
+                <h3>Backless,chain,criss cross Denim jacket</h3>
+                <p class="price">P350</p>
+                </div>
+                <input type="checkbox" value="350">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                 <img src="images/Amazon_com_ Fulihug Girls Jeans Size 10-12 Elastic….jpg" alt="Product 12"/>
+                <h3>Girls jeans</h3>
+                <p class="price">P150</p>
+                </div>
+                <input type="checkbox" value="150">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                 <img src="images/🔥Snag these must-haves on SHEIN before they're….jpg" alt="Product 13"/>
+                <h3>Denim Dress</h3>
+                <p class="price">P200</p>
+                </div>
+                <input type="checkbox" value="200">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/Men's Vintage Metal Zipper Washed Denim Baggy Shorts, Summer.jpg" alt="Product 14"/>
+                <h3>Denim Baggy shorts</h3>
+                <p class="price">P350</p>
+                </div>
+                <input type="checkbox" value="350">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/Men's Gothic Print Frayed Hem Fashionable Versatile Washed Denim Shorts.jpg" alt="Product 15"/>
+                <h3>Men's Gothic Print Frayed Hem Versatile Denim Shorts</h3>
+                <p class="price">P350</p>
+                </div>
+                <input type="checkbox" value="350">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/Men Ripped Flap Pocket Denim Jacket Without Hoodie.jpg" alt="Product16"/>
+                <h3>Mens ripped flap pocket denim with hoodie</h3>
+                <p class="price">P550</p>
+                </div>
+                <input type="checkbox" value="550">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                 <img src="images/Men Cotton Ripped Flap Pocket Denim Jacket Without Tee.jpg" alt="Product17"/>
+                <h3>Mens Cotton Ripped Pockect Denim Jacket</h3>
+                <p class="price">P250</p>
+                </div>
+                <input type="checkbox" value="250">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                 <img src="images/male model wearing an oversized denim bomber jacket with dark blue leather patch pockets.jpg" alt="Product18"/>
+                <h3>Mens oversized denim bomber jacket with blue leather patch pockets</h3>
+                <p class="price">P350</p>
+                </div>
+                <input type="checkbox" value="350">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/Levi's Men's 565 Loose Fit Mid Rise Jeans.jpg" alt="Product19"/>
+                <h3>Mens Levi jean</h3>
+                <p class="price">P350</p>
+                </div>
+                <input type="checkbox" value="350">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/How To Style Baggy Pants For Men_ Master The Trend In 2024.jpg" alt="Product20"/>
+                <h3>Baggy Denim pants</h3>
+                <p class="price">P400</p>
+                </div>
+                <input type="checkbox" value="400">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/Elegant White Pleated Maxi Skirt Featuring A Denim….jpg" alt="Product21"/>
+                <h3>White Pleated maxi skirt and a top</h3>
+                <p class="price">P450</p>
+                </div>
+                <input type="checkbox" value="450">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+                <img src="images/Aesthetic Wide Leg Vintage Denim Jeans.jpg" alt="Product22"/>
+                <h3>Wide Leg vintage denim jeans</h3>
+                <p class="price">P250</p>
+                </div>
+                <input type="checkbox" value="250">
+         </div>
+
+         <div class="product">
+            <div class="product-info">
+            <img src="images/224757837647153033.jpg" alt="Product23"/>
+             <div class="product-name">Ripped mens short</div>
+             <div class="price">P250</div>
+            </div>
+            <input type="checkbox" value="250">
+          </div>
+
+          <div class="product">
+            <div class="product-info">
+            <img src="images/332562753751568070.jpg" alt="Product24"/>
+             <div class="product-name">Modern tinted Denim jacket</div>
+             <p class="price">P450</p>
+            </div>
+             <input type="checkbox" value="450">
+          </div>
         </form>
-        </div>
+  </div>
 
-<!--RIGHT: CART SUMMARY -->
+<!--RIGHT: sidebar-->
+<div class="right-panel">
+<div class="Summary-area">
+<button type="button" onclick="calculateCart()"> Add Selected to Cart</button>
+    
         <div class="cart-summary">
             <h3> Cart Summary</h3>
-            <p>Item selected:0</p>
-            <p>Total:P0</p>
+            <p id="items">Items selected: 0</p>
+            <p id="total">Total: P0</p>
         </div>
 
     </div>
@@ -199,6 +512,83 @@
 
 </div>
 
+<!--ADDED JAVASCRIPT-->
+
+<script>
+function calculateCart() {
+
+    let items = document.querySelectorAll('input[type="checkbox"]:checked');
+    let total = 0;
+
+items.forEach(function(item) {
+  total += Number(item.value); 
+});
+
+
+document.getElementById("items").innerText= "Items selected:" +items.length;
+
+document.getElementById("total").innerText="Total: P"+total;
+}
+
+</script>
+
+<!--PAYMENT SECTION-now inside summary cart area-->
+<div class="payment-selection">
+    <h3>Select Payment Method 💰</h3>
+
+    <label><input type="radio" name="payment">Orange Money</label><br>
+
+    <label><input type="radio" name="payment">Pay to cell</label><br>
+
+    <label><input type="radio" name="payment">E-wallet
+    </label><br>
+
+    <label><input type="radio" name="payment">Visa </label><br>
+
+    <label><input type="radio" name="payment">My Zaka</label><br>
+
+<div>
+<h3>Hi! enter your credentials to proceed with payments</h3> 
+<input type="text" id="cardName" placeholder="Card Name">
+<input type="text" id="accountNumber" placeholder="Account Number">
+<input type="password" id="pin" placeholder="PIN">
+<input type="text" id="cellPhoneNumber" placeholder="cellPhone Number"><br>
+
+<button onclick="Checkout()">Proceed to Payments</button>
+
+</div>
+
+
+    <!--ADDED JAVASCRIPT-->
+<script>
+
+    function Checkout() {
+        let paymentMethod = document.querySelector('input[name="payment"]:checked');
+        let name = document.getElementById("cardName").value;
+        let account = document.getElementById("accountNumber").value;
+        let pin = document.getElementById("pin").value;
+        let cellphone = document.getElementById("cellPhoneNumber").value;
+
+       if (name==="" ||account ==="" ||pin === "") {
+          alert("Please fill in all payment details.");
+          return;
+       }
+
+       alert("Processing payment...");
+
+       setTimeout(function() {
+        alert("Payment sucessful! Thank you for shopping with Wens Lux Denim Store");
+    },1000);
+}
+</script>
+    </div>
+   </div>
+</div>
+</div>
+
+    <footer>
+        <p>&copy; 2026 Wens lux denim store.All rights are reserved</p>
+    </footer>
 </body>
 </html>
 
@@ -206,4 +596,3 @@
 
 
 
-    

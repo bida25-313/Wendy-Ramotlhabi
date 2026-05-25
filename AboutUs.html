@@ -1,30 +1,154 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en"> 
     <head>
         <meta charset="UTF-8">
         <meta name="viewpoint"content="width=device-width,initial-scale=1.0">
         <title>About Us </title>
-    </head>
-    <body>
-        <header>
+        <link rel="stylesheet" href="style.css">
+
+            <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Georgia', serif;
+        background-color: #f9f9f9;
+        padding: ;
+        text-align: center;
+      }
+
+      /* ── TOP HEADER ── */
+      header {
+        background: lightblue;
+        color: navy;
+        padding: 15px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+      }
+
+      /* ── NAV ── */
+      nav {
+        background:  rgb(0, 0, 80);
+        padding: 10px 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .nav-item .nav-link {
+        display: block;
+        padding: 8px 14px;
+        text-decoration: none;
+        color: goldenrod;
+        border-radius: 4px;
+        transition: background 0.2s;
+        font-size: 14px;
+      }
+
+      .nav-item .nav-link:hover {
+        background: lightblue;
+        color: #fff;
+      }
+
+      /* ── MAIN LAYOUT ── */
+      .container {
+        display: flex;
+        min-height: calc(100vh - 110px);
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-end;
+      }
+
+      .text-block {
+        background:lightblue;
+        padding: 20px;
+        width: 300px;
+        margin: 40px auto;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgb(45, 45, 233);
+      }
+      
+</style>
+</head>
+
+<body>
+
+    <!--TOP HEADER -->
+         <header>
             <h1>About Us</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="AboutUs .html">About Us</a>
-                <a href="Products .html">Products</a>
-                <a href="Addtocart. html">Add to cart</a>
-                <a href="Feedback .html">Feedback</a>
-                <a href="Contact .html">Contact</a>
-            </nav>
         </header>
 
-        <main>
-            <p>Hi! im a beginner web developer learning to use github page</p>
-            <p>This is my first multi-page website , and im excited to share it with you!</p>
-        </main>
+<!--NAVIGATION-->
+         <nav>
+            <ul>
+               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li> 
+               <li class="nav-item"><a class="nav-link" href="Products.html">Products</a></li>
+               <li class="nav-item"><a class="nav-link" href="Addtocart.html">Add to cart</a></li>
+               <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
+               <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+            </ul>    
+            </nav>
+    
+            <!--MAIN CONTENT-->
+     <div class="text-block">
+      
+            <p>Wens Lux Denim Store is an online store that sells denim products for men ,women, and teens that was established in 2026 to make shopping fun and less demanding .Our collection is very unique and high quality because we as Wens Lux Denim Store collaborate with manufactures and creative minds to bring well crafted denim designer clothes to our lovely customers. </p>
+        </div>
+
+        <div class="text-block">
+            <h3><bold>OUR MISSION</bold></h3>
+            <p>Our mission is to provide high quality and comfortable modern fashionable denims clothes at affordable prices while increasing online sales by 25% within 3 months.</p>
+        </div>
+
+      <div class="text-block">
+            <h3><bold>OUR VISION</bold></h3>
+            <p>Our vsion is to become one best leading online denim brand in Africa and also provide the same best services all over the world.We aim to create a space where cool elegance meets strength,allowing everyone to express their librated and unique sprits and seek to reveal the simplicity in strength and complexity in indviduality. </p>
+      </div>
+      
+      <div class="text-block">
+            <h3><bold>STILL HAVE QUESTIONS?</bold></h3>
+            <h3>How long will it take for my order to arrive?</h3>
+            <p>Our orders take 5-10 days </p>
+      </div>
+
+      <div class="text-block">
+            <h3>What are the delivery rate/shipping costs?</h3>
+            <p>We deliver around Gaborone at P30 via indrive</p>
+            <p>We use sprint couriers to deliver to any place even outside Botswana</p>
+      </div>
+
+      <div class="text-block">
+            <h3>Which payments options do you offer?</h3>
+            <p> 📱Orange money</p>
+            <p>📞Pay to cell</p>
+            <p>💵Ewallet </p>
+            <p>💳Visa</p>
+            <p>📲 MyZaka</p>
+            <p>All payments are to be done on :74657290/75502208</p>
+      </div>
+
+      <div class="text-block">
+            <h3>Do i need to an account to place an order in ourstore?</h3>
+            <p>Yes!You need a bank account to make payments</p>
+      </div>
 
 <footer>
     <p>2026 Wens lux denim store.All rights are reserved.</p>
 </footer>
     </body>   
 </html>
+
+
