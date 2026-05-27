@@ -2,7 +2,7 @@
 <html lang="en"> 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewpoint"content="width=device-width,initial-scale=1.0">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
         <title>About Us </title>
         <link rel="stylesheet" href="style.css">
 
@@ -16,7 +16,6 @@
       body {
         font-family: 'Georgia', serif;
         background-color: #f9f9f9;
-        padding: ;
         text-align: center;
       }
 
@@ -79,7 +78,43 @@
         text-align: center;
         box-shadow: 0 4px 10px rgb(45, 45, 233);
       }
-      
+
+    .text-block:hover{
+      transition: translateY(-5);
+    }
+/*---BACKGROUND---*/
+      .background-image {
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(221, 233, 241, 0.5),
+         rgba(196, 234, 242, 0.5)),
+       url("images/about us.jpg");
+        padding: 40px;
+      }
+
+      .hero-text p{
+        text-align: center;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .hero-text h2{
+        font-size: 50px;
+      }
+
+      .hero-text p{
+        font-size: 22px;
+        text-align: center;
+      }
+
+  
 </style>
 </head>
 
@@ -103,23 +138,28 @@
             </nav>
     
             <!--MAIN CONTENT-->
+            <main>
+              <div class="background-image">
+
+  <div class="hero-text">
+
      <div class="text-block">
       
             <p>Wens Lux Denim Store is an online store that sells denim products for men ,women, and teens that was established in 2026 to make shopping fun and less demanding .Our collection is very unique and high quality because we as Wens Lux Denim Store collaborate with manufactures and creative minds to bring well crafted denim designer clothes to our lovely customers. </p>
         </div>
 
         <div class="text-block">
-            <h3><bold>OUR MISSION</bold></h3>
+            <h3><strong>OUR MISSION</strong></h3>
             <p>Our mission is to provide high quality and comfortable modern fashionable denims clothes at affordable prices while increasing online sales by 25% within 3 months.</p>
         </div>
 
       <div class="text-block">
-            <h3><bold>OUR VISION</bold></h3>
+            <h3><strong>OUR VISION</strong></h3>
             <p>Our vsion is to become one best leading online denim brand in Africa and also provide the same best services all over the world.We aim to create a space where cool elegance meets strength,allowing everyone to express their librated and unique sprits and seek to reveal the simplicity in strength and complexity in indviduality. </p>
       </div>
       
       <div class="text-block">
-            <h3><bold>STILL HAVE QUESTIONS?</bold></h3>
+            <h3><strong>STILL HAVE QUESTIONS?</strong></h3>
             <h3>How long will it take for my order to arrive?</h3>
             <p>Our orders take 5-10 days </p>
       </div>
@@ -144,6 +184,9 @@
             <h3>Do i need to an account to place an order in ourstore?</h3>
             <p>Yes!You need a bank account to make payments</p>
       </div>
+      </div>
+      </div>
+    </main>
 
 <footer>
     <p>2026 Wens lux denim store.All rights are reserved.</p>

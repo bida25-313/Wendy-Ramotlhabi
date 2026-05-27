@@ -70,9 +70,10 @@
 
       /* ── MAIN CONTENT ── */
       .main {
-        padding: 30px;
+        padding: 30px 20px;
         text-align: center;
         text-decoration: none;
+
       }
 
       .main p{
@@ -93,6 +94,40 @@
       .main a:hover{
         color: lightblue;
       }
+
+      /*---BACKGROUND---*/
+      .background-image {
+        position: relative;
+        height: 100vh;
+        min-height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(165, 198, 218, 0.5),
+        rgba(255,255,255,0.5)),
+         url("images/contact.jpg");
+        padding: 40px;
+      }
+
+      .hero-text p{
+        text-align: center;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .hero-text h2{
+        font-size: 50px;
+      }
+
+      .hero-text p{
+        font-size: 22px;
+        text-align: center;
+      }
+
 
       </style>
 
@@ -118,6 +153,11 @@
     </nav>
 
     <main class="main">
+
+      <div class="background-image">
+
+  <div class="hero-text">
+
       <p><strong>Get in touch,I will love to hear from you.</strong></p>
         <p> If you will like to get in touch  with Wens Lux Denim Store free to email us at <a href="mailto:Wensluxdenimstore@gmail.com">Wensluxdenimstore@gmail.com</a></p>
         <br>
@@ -129,6 +169,8 @@
         <p>For more information contact the following numbers:</p>
         <p>CONTACT:74657290/75502208</p>
         <br>
+        </div>
+        </div>
     </main>
 
     <footer>

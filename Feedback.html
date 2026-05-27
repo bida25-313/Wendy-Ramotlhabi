@@ -144,6 +144,39 @@
         
     }
 
+    /*---BACKGROUND---*/
+      .background-image {
+        position: relative;
+        height: 100vh;
+        min-height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(229, 244, 254, 0.5),
+        rgba(147, 159, 161, 0.5)),
+         url("images/feedback.jpg");
+        padding: 40px;
+      }
+
+      .hero-text p{
+        text-align: center;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .hero-text h2{
+        font-size: 50px;
+      }
+
+      .hero-text p{
+        font-size: 22px;
+        text-align: center;
+      }
+
     </style>
 
 </head>
@@ -171,6 +204,10 @@
     <body>
 
         <main>
+          <div class="background-image">
+
+  <div class="hero-text">
+
         <div class="page-content">
             <div class="feedback">
                 <h2>Share Your Feedback</h2>
@@ -199,6 +236,8 @@
 
         <!--BOTTOM FEEDBACK TEXTAREA-->
         <p>Thank you for helping us improve our service</p> 
+        </div>
+        </div>
     </main>
     </body>
 
